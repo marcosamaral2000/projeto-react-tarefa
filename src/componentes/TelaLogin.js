@@ -19,8 +19,8 @@ className="box">
 <div
 style={{color:"red"}}>
 {erro?<p
-aria-label="mensagem de erro">
-{erro}
+aria-label={"mensagem de erro:"+erro}>
+    {erro}
 </p>:null}
 </div>    
 
