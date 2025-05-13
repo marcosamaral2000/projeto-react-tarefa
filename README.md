@@ -1,0 +1,2 @@
+# projeto-react-tarefa
+Esse projeto foi criado por Marcos Vinícius Amaral Coelho, na disciplina de Programação Web do Curso Técnico de Desenvolvimento de Sistemas, do Instituto Benjamin Constant (IBC). O projeto foi desenvolvido para aprendizado do aluno, orientado pela Profa. Joyce Miranda.

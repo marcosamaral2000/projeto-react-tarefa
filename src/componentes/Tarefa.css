@@ -1,0 +1,21 @@
+.tarefa-box{
+    background-color: lightblue;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.box{
+    margin:  30px auto;
+    padding: 30px ; 
+    border:  2px solid darkblue;
+    text-align: center;
+}
+.grid-botoes{
+    display: flex;
+}
+.botao-grid{
+ border:  1px solid aqua;   
+ margin:  5px;
+ cursor:  pointer;
+}
