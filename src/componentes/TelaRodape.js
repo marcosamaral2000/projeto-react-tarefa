@@ -13,7 +13,7 @@ style={
     }
     }>
     <p>
-        Criado por: Marcos Vinícius Amaral Coelho
+        Criado por: Marcos Vinícius Amaral Coelho @ 2025
     </p>
 </footer>
 </>
