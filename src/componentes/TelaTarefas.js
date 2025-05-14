@@ -33,7 +33,7 @@ return(
             <p
                         style={
                 {
-                    textAlign:"center",
+                    textAlign:"left",
                     width:"100%"
                 }
             }>
