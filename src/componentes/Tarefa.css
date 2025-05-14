@@ -4,15 +4,20 @@
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
+    gap: 5px;
+    align-items: center;
 }
 .box{
     margin:  30px auto;
     padding: 30px ; 
     border:  2px solid darkblue;
     text-align: center;
+    min-width: fit-content;
 }
 .grid-botoes{
     display: flex;
+    width: 40px;
+    height: 40px;
 }
 .botao-grid{
  border:  1px solid aqua;   
