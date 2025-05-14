@@ -42,6 +42,9 @@ useEffect(
                     <li>
                         <Link to="/tarefas">Tarefas</Link>
                     </li>
+                                        <li>
+                        <Link to="#" onClick={fazerLogout}>Sair</Link>                    
+                        </li>
                     <li>
                         </li>
                 
