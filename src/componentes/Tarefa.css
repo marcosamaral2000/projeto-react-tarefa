@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
-    text-align: center;
 }
 .box{
     margin:  30px auto;

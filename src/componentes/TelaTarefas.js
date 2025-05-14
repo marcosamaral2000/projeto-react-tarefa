@@ -33,7 +33,8 @@ return(
             <p
                         style={
                 {
-                    textAlign:"center"
+                    textAlign:"center",
+                    width:"100%"
                 }
             }>
                 {tarefa.titulo}
