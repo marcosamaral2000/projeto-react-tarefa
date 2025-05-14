@@ -16,11 +16,11 @@
 }
 .grid-botoes{
     display: flex;
-    width: 40px;
-    height: 40px;
 }
 .botao-grid{
  border:  1px solid aqua;   
  margin:  5px;
  cursor:  pointer;
+     width: 40px;
+    height: 40px;
 }
