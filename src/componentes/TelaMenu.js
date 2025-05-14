@@ -33,9 +33,15 @@ useEffect(
                         </li>
                 </ul>
             </div>
+
         </nav>
 
         <ul id="mobile-menu" className="sidenav">
+            <li>
+                <a href="#!" className="sidenav-close">
+                    <i className="material-icons" aria-label="fechar menu">close</i>
+                </a>
+            </li>
         <li>
                         <Link to="/">Login</Link>
                     </li>
@@ -47,7 +53,6 @@ useEffect(
                         </li>
                     <li>
                         </li>
-                
         </ul>
         </>
     )
