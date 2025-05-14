@@ -35,11 +35,10 @@ useEffect(
             </div>
 
         </nav>
-
         <ul id="mobile-menu" className="sidenav">
             <li>
                 <a href="#!" className="sidenav-close">
-                    <i className="material-icons" aria-label="fechar menu">close</i>
+                    <i className="material-icons" aria-label="fechar menu" translate="no">close</i>
                 </a>
             </li>
         <li>
