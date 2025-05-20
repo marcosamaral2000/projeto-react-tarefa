@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate} from "react-router-dom";
 import "./Tarefa.css"
-import useTarefa from "../hooks/useTarefa";
+import useTarefa_firebase from "../hooks/useTarefa_firebase";
 
 const TelaTarefaDetalhes = () =>{
 
@@ -17,7 +17,7 @@ navigate(-1)
 
 const [radio_finalizada, setRadio_finalizada] = useState(tarefa.finalizada)
 
-const {alterar_tarefa} = useTarefa()
+const {alterar_tarefa} = useTarefa_firebase()
 const handle_button_click_alterar = () =>{
 const tarefaEditada = {...tarefa, titulo: input_tituloTarefa, finalizada: radio_finalizada}
 alterar_tarefa(tarefaEditada)
