@@ -39,7 +39,7 @@ e.preventDefault()
 setErro("")
 try {
     await createUserWithEmailAndPassword(auth, email, senha)
-    alert("Cadastro erralizado com sucesso. ")
+    alert("Cadastro realizado com sucesso. ")
     navigate("/")
 } catch (error) {
     setErro("Erro ao cadastrar: " + error.message)

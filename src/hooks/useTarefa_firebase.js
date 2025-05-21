@@ -34,7 +34,7 @@ setListaTarefas(listaTarefasUsuario)
 
 useEffect(( )=>{
 BuscarTarefas()
-}, [usuario])
+}, [usuario, listaTarefas])
 
 //Função para adicionar uma nova tarefa no fire base
 
