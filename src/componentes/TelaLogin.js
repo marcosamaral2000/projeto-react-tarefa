@@ -5,12 +5,14 @@ import { EmailAuthCredential } from "firebase/auth/web-extension";
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import useUsuario from "../hooks/useUsuario";
+import { ToastContainer } from "react-toastify";
 
 const TelaLogin = () =>{
     const {erro, senha, setSenha, email, setEmail, fazerLogin} = useUsuario()
 
 return(
     <>
+              <ToastContainer />
 <div 
 className="box">
 <h4>

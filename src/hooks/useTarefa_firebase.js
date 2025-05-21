@@ -34,13 +34,13 @@ setListaTarefas(listaTarefasUsuario)
 
 useEffect(( )=>{
 BuscarTarefas()
-}, [usuario, listaTarefas])
+}, [usuario])
 
 //Função para adicionar uma nova tarefa no fire base
 
 const adicionar_tarefa = async (titulo) =>{
     if(titulo.trim() === ""){
-        alert("Tarefa não pode conter título embranco. ")
+        alert("Tarefa não pode conter título embranco. ", "success")
     }else if(titulo.length < 3 || titulo.length > 15){
 alert("Tarefa precisa ter entre 3 a 15 caracteres.")
     }else{
@@ -51,12 +51,7 @@ const novaTarefa = {
 }
 try {
     const novoRegistro = await addDoc(collection(db, "tarefas"), novaTarefa)
-    //Atualizando a lista de tarefas com a nova tarefa
-    const novaListaTarefa = [
-        ...listaTarefas, 
-        {id: novoRegistro.id, ...novaTarefa}
-    ]
-    setListaTarefas(novaListaTarefa)
+    BuscarTarefas()
     alert("Tarefa adicionada com sucesso. ")
 } catch (error) {
     alert("Erro ao adicionar tarefa:  "+error)
@@ -74,7 +69,7 @@ navigate("/tarefaDetalhes", {state: tarefa})
 const excluir_tarefa = async (id) =>{
     try {
 await deleteDoc(doc(db, "tarefas", id))
-setListaTarefas(listaTarefas.filter(tarefa => tarefa.id !== id))
+BuscarTarefas()
 alert("Tarefa removida. ")
     } catch (error) {
         alert("Erro ao excluir a tarefa: " +error)
@@ -83,6 +78,11 @@ alert("Tarefa removida. ")
 
 //Função para alterar uma tarefa no fire base
 const alterar_tarefa = async (tarefa_editada) =>{
+    if(tarefa_editada.titulo.trim() === ""){
+        alert("Tarefa não pode conter título embranco. ")
+    }else if(tarefa_editada.titulo.length < 3 || tarefa_editada.titulo.length > 15){
+        alert("Tarefa precisa ter entre 3 a 15 caracteres.")
+    }else{
     try {
         const registro_tarefa = doc(db, "tarefas", tarefa_editada.id)
         await updateDoc(registro_tarefa,
@@ -91,15 +91,12 @@ const alterar_tarefa = async (tarefa_editada) =>{
                 finalizada: tarefa_editada.finalizada
             }
         )
-        //Atualiza a tarefa na lista localmente
-        const novaListaTarefa = listaTarefas.map((tarefa) =>
-            tarefa.id === tarefa_editada.id?tarefa_editada:tarefa
-        )
-        setListaTarefas(novaListaTarefa)
+        BuscarTarefas()
         alert("Tarefa alterada com sucesso. ")
     } catch (error) {
         alert("Erro ao alterar tarefa: " +error)
     }
+}
 }
 
     return{
