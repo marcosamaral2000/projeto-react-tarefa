@@ -93,6 +93,7 @@ const alterar_tarefa = async (tarefa_editada) =>{
         )
         BuscarTarefas()
         alert("Tarefa alterada com sucesso. ")
+        navigate("/tarefas")    
     } catch (error) {
         alert("Erro ao alterar tarefa: " +error)
     }

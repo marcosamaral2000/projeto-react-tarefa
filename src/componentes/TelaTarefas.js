@@ -22,6 +22,7 @@ return(
     <div className="box">
         <FormCadTarefa 
         adicionar_tarefa={adicionar_tarefa} />
+                    {/*<p>Total de tarefas: {listaTarefas.length}</p>*/}
         {
             listaTarefas.length==0?(<p>Nenhuma tarefa cadastrada.</p>):
         listaTarefas.map(tarefa => 

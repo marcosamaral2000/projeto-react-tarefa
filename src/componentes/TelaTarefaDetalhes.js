@@ -21,7 +21,6 @@ const {alterar_tarefa} = useTarefa_firebase()
 const handle_button_click_alterar = () =>{
 const tarefaEditada = {...tarefa, titulo: input_tituloTarefa, finalizada: radio_finalizada}
 alterar_tarefa(tarefaEditada)
-navigate("/tarefas")    
 }
 
 return(
