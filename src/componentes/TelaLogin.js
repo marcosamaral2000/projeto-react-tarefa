@@ -49,13 +49,11 @@ setEmail(campo.target.value)
     </div>
     <div 
     style={
-{
+                    {
             display:"flex",
              alignItems:"center",
-              gap:"10px",
-              whiteSpace:"nowrap"
-}
-}>
+              gap:"10"
+    }}>
     Senha: 
 <input type="password"
 placeholder="senha"
@@ -64,10 +62,10 @@ value={senha}
 onChange={(campo) =>{
     setSenha(campo.target.value)
 }}
-/ >
+/>
     </div>
     
-    <button type="submite"
+    <button type="submit"
     style={{padding:"10px"}}>
         Entrar
         </button>
