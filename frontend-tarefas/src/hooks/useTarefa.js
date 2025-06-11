@@ -14,6 +14,7 @@ const auth = getAuth()
 const usuario = auth.currentUser
 
 const [listaTarefas, setListaTarefas] = useState(
+    
     () =>{
         const listaTarefas_storage = localStorage.getItem("listaTarefas")
         const todasTarefas = listaTarefas_storage?JSON.parse(listaTarefas_storage):[]
