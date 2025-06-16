@@ -1,7 +1,10 @@
 import axios, { getAdapter } from "axios";
+import { configDotenv } from "dotenv";
 import { getAuth } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+configDotenv()
 
 const useTarefa_mysql = () =>{
     const [listaTarefas, setListaTarefas] = useState([])
@@ -10,9 +13,13 @@ const [titulo, setTitulo] = useState("")
 const [finalizada, setFinalizada] = useState(false)
 const navigate = useNavigate()
 
+
 //Definição fixa da url do servidor my sql
 const api = axios.create({
-    baseURL:"http://localhost:3001"
+//    baseURL:"http://localhost:3001"
+baseURL: process.env.BACKEND_API_URL
+
+
 })
 
 //Recuperando o usuário logado do firebase
