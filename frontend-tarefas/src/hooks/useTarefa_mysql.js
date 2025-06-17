@@ -1,23 +1,24 @@
 import axios, { getAdapter } from "axios";
-import { configDotenv } from "dotenv";
 import { getAuth } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-configDotenv()
+
 
 const useTarefa_mysql = () =>{
-    const [listaTarefas, setListaTarefas] = useState([])
+const [listaTarefas, setListaTarefas] = useState([])
 const [id, setId] = useState(null)
 const [titulo, setTitulo] = useState("")
 const [finalizada, setFinalizada] = useState(false)
 const navigate = useNavigate()
 
 
+console.log("process.env.BACKEND_API_URL : >> " + process.env.REACT_APP_BACKEND_API_URL)
+
 //Definição fixa da url do servidor my sql
 const api = axios.create({
 //    baseURL:"http://localhost:3001"
-baseURL: process.env.BACKEND_API_URL
+baseURL: process.env.REACT_APP_BACKEND_API_URL
 
 
 })

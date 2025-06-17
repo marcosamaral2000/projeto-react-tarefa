@@ -3,15 +3,14 @@ import "./Tarefa.css";
 import FormCadTarefa from "./FormCadTarefa";
 import { AiOutlinePlus } from "react-icons/ai";
 import { CgClose } from "react-icons/cg";
-import useTarefa from "../hooks/useTarefa";
 import useTarefa_mysql from "../hooks/useTarefa_mysql";
 //import useTarefa_firebase from "../hooks/useTarefa_firebase";
 
 const TelaTarefas = () =>{
 
-const {adicionar_tarefa, listaTarefas, exibir_detalhe_tarefa, excluir_tarefa, usuario} = useTarefa()
+//const {adicionar_tarefa, listaTarefas, exibir_detalhe_tarefa, excluir_tarefa, usuario} = useTarefa()
 //const {listaTarefas, adicionar_tarefa, usuario, exibir_detalhe_tarefa, excluir_tarefa, alterar_tarefa} = useTarefa_firebase()
-//const {listaTarefas, adicionar_tarefa, usuario, exibir_detalhe_tarefa, excluir_tarefa, alterar_tarefa} = useTarefa_mysql()
+const {listaTarefas, adicionar_tarefa, usuario, exibir_detalhe_tarefa, excluir_tarefa, alterar_tarefa} = useTarefa_mysql()
 
 return(
     <>
