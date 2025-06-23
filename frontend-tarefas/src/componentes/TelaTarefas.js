@@ -4,6 +4,7 @@ import FormCadTarefa from "./FormCadTarefa";
 import { AiOutlinePlus } from "react-icons/ai";
 import { CgClose } from "react-icons/cg";
 import useTarefa_mysql from "../hooks/useTarefa_mysql";
+import { ToastContainer } from "react-toastify";
 //import useTarefa_firebase from "../hooks/useTarefa_firebase";
 
 const TelaTarefas = () =>{
@@ -20,6 +21,10 @@ return(
     >
         Minhas Tarefas  -  {usuario.email}
         </h4>
+
+      <ToastContainer position="top-right" />
+
+
     <div className="box">
         <FormCadTarefa 
         adicionar_tarefa={adicionar_tarefa} />
@@ -34,7 +39,7 @@ return(
         style={tarefa.finalizada?{borderLeft:"6px solid green"}:{borderLeft: "6px solid red"}}
         aria-label={tarefa.finalizada?"Tarefa concluída. ":"Tarefa não concluída."}
         >
-            <p
+            <p tabIndex={1}
                         style={
                 {
                     textAlign:"left",
@@ -44,20 +49,18 @@ return(
                 {tarefa.titulo}
             </p>
             <div className="grid-botoes">
-                <button
+                <button  tabIndex={1}
                 aria-label="detalhes" 
                 className="botao-grid" 
-                tabIndex={2} 
                 onClick={() => 
                     {exibir_detalhe_tarefa(tarefa.id)}
                 }>
                     <AiOutlinePlus />
                 </button>
 
-<button 
+<button  tabIndex={1}
 aria-label="excluir" 
 className="botao-grid" 
-tabIndex={2} 
 onClick={() =>
 {excluir_tarefa(tarefa.id)}
 }>
